@@ -1,0 +1,8 @@
+.date-picker {
+    font-size: 1em; /* Ajustez la taille du texte pour rendre le DatePicker plus grand */
+    border-radius: 10px; /* Ajoutez des bordures arrondies */
+    border: 1px solid #ccc; /* Ajoutez une bordure */
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+    width: 100px; /* Ajoutez du padding */
+}
