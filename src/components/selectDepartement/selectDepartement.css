@@ -1,0 +1,11 @@
+.selectinputdepartements {
+    width: 90%;
+    padding: 11px 0;
+    border-radius: 10px; /* Adjust as needed */
+    border-color: #ccc; /* Adjust as needed */
+    font-family: 'Inter', sans-serif;
+    color: #000039; /* Adjust as needed */
+    font-size: 16px; /* Adjust as needed */
+}
+
+

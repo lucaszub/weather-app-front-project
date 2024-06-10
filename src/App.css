@@ -1,0 +1,34 @@
+.App {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 2;
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px #d1cccc;
+}
+
+.Main {
+  display: flex;
+  height: calc(100vh - 90px); /* subtract the height of the Navbar */
+  margin-top: 90px; /* add a top margin equal to the height of the Navbar */
+}
+
+
+.Sidebar {
+  flex: 1; /* takes 1/7th of the space */
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px #d1cccc;
+}
+
+.Content {
+  flex: 6; /* takes 6/7th of the space */
+  background-color: #FAFAFA;
+}
