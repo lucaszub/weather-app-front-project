@@ -10,8 +10,9 @@ const Linechart = ({ startDate, endDate, region, departement, granularity, setTe
       setLoading(true);
       const startDateStr = startDate.toISOString().split('T')[0];
       const endDateStr = endDate.toISOString().split('T')[0];
-      try {
-        const response = await fetch(`http://127.0.0.1:8000/temperature_stats/temperature_stats/?start_date_str=${startDateStr}&end_date_str=${endDateStr}${region ? `&region_name=${region}` : ''}${departement ? `&department_name=${departement}` : ''}`);
+      try {                           
+        // const response = await fetch(`http://127.0.0.1:8000/temperature_stats/temperature_stats/?start_date_str=${startDateStr}&end_date_str=${endDateStr}${region ? `&region_name=${region}` : ''}${departement ? `&department_name=${departement}` : ''}`); // for api local
+        const response = await fetch(`http://13.39.23.186:8000/temperature_stats/temperature_stats/?start_date_str=${startDateStr}&end_date_str=${endDateStr}${region ? `&region_name=${region}` : ''}${departement ? `&department_name=${departement}` : ''}`); // for api aws
         const result = await response.json();
         setData(result.temperature_stats);
         console.log("API response", result); // Log the entire response

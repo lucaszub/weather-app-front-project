@@ -11,7 +11,8 @@ const SelectDepartement = ({setDepartement}) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`http://127.0.0.1:8000/departments/departements/`);
+        // const response = await fetch(`http://127.0.0.1:8000/departments/departements/`); //for local api
+        const response = await fetch(`http://13.39.23.186:8000/departments/departements/`); // for aws api
         const result = await response.json();
         console.log('API response:', result);
         setData(result.departements);
