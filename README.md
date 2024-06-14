@@ -68,3 +68,57 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+# To deploye the applicatin on ec2
+
+## To build the image
+https://www.freecodecamp.org/news/how-to-dockerize-a-react-application/
+
+
+docker image build -t front-end:v8 .
+docker run -p 3000:3000 front-end:v8 # tester en local
+
+docker login
+
+docker image tag front-end:v8 lucaszub/react-front-end:v8          # changer le v1 pour les future versions 
+
+docker push lucaszub/react-front-end:v8
+
+docker pull lucaszub/react-front-end:v8
+
+
+
+ssh -i "cle-weather-app-project.pem" ubuntu@ec2-52-47-201-9.eu-west-3.compute.amazonaws.com
+
+ssh -i "cle-weather-app-project.pem" ubuntu@ec2-51-44-22-51.eu-west-3.compute.amazonaws.com
+scp -i "C:\wild code school\weather_app\frontend weather app\cle-weather-app-project.pem" -r "C:\wild code school\weather_app\frontend weather app\weather_app" ubuntu@35.180.250.227:/home/ubuntu
+
+# installer docker 
+https://docs.docker.com/engine/install/ubuntu/
+docker login
+
+docker pull lucaszub/react-front-end:v5
+
+docker push lucaszub/react-front-end:v5
+
+
+docker run -p 3000:3000 lucaszub/react-front-end:v7
+
+docker run -d -p 3000:3000 front-end:v5
+
+172.31.13.119
+
+http://172.31.13.119:3000
+51.44.22.51
+
+http://51.44.22.51:3000
+
+
+
+
+
+
+http://localhost:8000
